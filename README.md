@@ -64,7 +64,7 @@ The cloud KMS market spans **native cloud provider key services** (AWS KMS, Azur
 
 ## 🔓 Open-Source GitHub Projects
 
-*Sorted by GitHub Stars Count (Descending)* 🌟
+*Sorted by GitHub_Stars_Count (Descending)* 🌟
 
 - **[HashiCorp Vault](https://github.com/hashicorp/vault)** [![Stars](https://img.shields.io/github/stars/hashicorp/vault?style=social&color=white)](https://github.com/hashicorp/vault/stargazers)  
   **Identity-based secrets and encryption management system**, BUSL-1.1 licensed (v1.15+; earlier MPL-2.0). **The reference implementation** for secrets management depth and flexibility. **Dynamic secrets** for AWS, Azure, GCP, databases, and SSH. **PKI secrets engine** for certificate authority. **Transit engine** for encryption as a service. **The most widely deployed enterprise secrets management platform** — but the license change to BUSL drove the OpenBao fork. 🔐
@@ -113,7 +113,7 @@ Contributions are welcome! Follow these steps to submit new KMS platforms or ope
 
 1. 🍴 **Fork** the repository.
 2. 📝 **Add/edit** entries in `README.md` maintaining table/list structure and formatting.
-3. 🔗 Include project title, official website/GitHub link, exact Stars Count, license, and brief description.
+3. 🔗 Include project title, official website/GitHub link, exact Stars_Count, license, and brief description.
 4. 🚀 Submit a **Pull Request** with a descriptive summary of your changes.
 
 ---
