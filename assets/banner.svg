@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+
+    <style>
+      @keyframes floatParticle {
+        0% { transform: translateY(0px) scale(1); opacity: 0.3; }
+        50% { transform: translateY(-15px) scale(1.1); opacity: 0.8; }
+        100% { transform: translateY(0px) scale(1); opacity: 0.3; }
+      }
+      @keyframes pulseGlow {
+        0% { opacity: 0.2; transform: scale(0.98); }
+        50% { opacity: 0.5; transform: scale(1.02); }
+        100% { opacity: 0.2; transform: scale(0.98); }
+      }
+      @keyframes dashRotate {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 360; }
+      }
+      .bg-glow { animation: pulseGlow 6s ease-in-out infinite; transform-origin: center; }
+      .p1 { animation: floatParticle 4s ease-in-out infinite; }
+      .p2 { animation: floatParticle 5s ease-in-out infinite 1s; }
+      .p3 { animation: floatParticle 6s ease-in-out infinite 2s; }
+      .orbit-ring { stroke-dasharray: 12, 12; animation: dashRotate 20s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Ambient Glow -->
+  <circle cx="600" cy="160" r="400" fill="url(#glow)" class="bg-glow" />
+
+  <!-- Dynamic Animated Background Elements (Behind Text) -->
+  <g opacity="0.4">
+    <!-- Cryptographic Orbit Rings -->
+    <circle cx="150" cy="160" r="90" fill="none" stroke="#38bdf8" stroke-width="1.5" class="orbit-ring" />
+    <circle cx="1050" cy="160" r="90" fill="none" stroke="#c084fc" stroke-width="1.5" class="orbit-ring" />
+    
+    <!-- Floating Cyber Particles -->
+    <circle cx="220" cy="80" r="4" fill="#38bdf8" class="p1" />
+    <circle cx="350" cy="240" r="3" fill="#818cf8" class="p2" />
+    <circle cx="850" cy="70" r="5" fill="#c084fc" class="p3" />
+    <circle cx="980" cy="250" r="3" fill="#38bdf8" class="p1" />
+
+    <!-- Grid Accent Lines -->
+    <path d="M 100 0 L 100 320 M 1100 0 L 1100 320" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Foreground Title and Subtitle (Guaranteed High Contrast & Visibility) -->
+  <g text-anchor="middle">
+    <!-- Top Icon Badge -->
+    <text x="600" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" fill="#38bdf8">🔐 🗝️ ☁️</text>
+    
+    <!-- Main Title -->
+    <text x="600" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="44" fill="url(#textGrad)" letter-spacing="1">
+      Awesome Cloud Key Management Service (KMS)
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="20" fill="#94a3b8" letter-spacing="0.5">
+      Enterprise Key Management • Secret Management Platforms • Envelope Encryption • BYOK/HYOK Frameworks
+    </text>
+
+    <!-- Feature Pill Badges -->
+    <g transform="translate(370, 235)">
+      <rect x="0" y="0" width="130" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+      <text x="65" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#38bdf8">AWS KMS</text>
+
+      <rect x="150" y="0" width="140" height="32" rx="16" fill="#1e293b" stroke="#818cf8" stroke-width="1" />
+      <text x="220" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#818cf8">Azure Key Vault</text>
+
+      <rect x="305" y="0" width="150" height="32" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="1" />
+      <text x="380" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#c084fc">HashiCorp Vault</text>
+    </g>
+  </g>
+</svg>
